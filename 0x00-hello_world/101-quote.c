@@ -8,7 +8,8 @@
  */
 int main(void)
 {
-char *data = "and that piece of art is useful\"- Dora Korpar, 2015-10-19\n\0";
+const char *data = "and that piece of art is useful\"\
+ - Dora Korpar, 2015-10-19\n\0";
 unsigned long len = strlen(data);
 write(2, data, len);
 return (1);
