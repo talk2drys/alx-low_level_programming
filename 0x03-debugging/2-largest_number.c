@@ -12,17 +12,12 @@ int largest_number(int a, int b, int c)
 {
 	int largest = a;
 
-	if !(largest > b)
+	if (largest < b)
+	{
 		largest = b;
-	else if !(largest > c)
+	}	else if (largest < c)
+	{
 		largest = c;
-
+	}
 	return (largest);
 }
-
-void main(void ) { 
-	int val = largest_number(10, 12, 12);
-	printf("%d\n");
-	return 0;
-}
-
