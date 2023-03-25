@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdbool.h>
 
 /**
  * _isupper - checks for uppercase character
@@ -9,7 +8,7 @@
 
 int _isupper(int c)
 {
-	_Bool ret = ((char)c >= 'A' && (char)c <= 'Z');
+	char ret = ((char)c >= 'A' && (char)c <= 'Z');
 
 	return ((int)ret);
 }
