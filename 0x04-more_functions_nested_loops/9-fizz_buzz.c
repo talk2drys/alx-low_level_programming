@@ -17,9 +17,12 @@ int main(void)
 		}
 		else if (i % 5 == 0)
 		{
-			if (i != 100) {
+			if (i != 100)
+			{
 				printf("Buzz ");
-			}else {
+			}
+			else
+			{
 				printf("Buzz");
 			}
 		}
@@ -29,9 +32,12 @@ int main(void)
 		}
 		else
 		{
-			if (i != 100) {
+			if (i != 100)
+			{
 				printf("%d ", i);
-			}else {
+			}
+			else
+			{
 				printf("%d", i);
 			}
 		}
