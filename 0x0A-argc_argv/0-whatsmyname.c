@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define UNUSED_ARGC int argc __attribute__((unused))
+
 /**
  * main - prints the name of the program
  * @argc: number of arguments
@@ -7,7 +9,7 @@
  *
  * Return: 0 (success)
  */
-int main(int argc, char **argv)
+int main(UNUSED_ARGC, char **argv)
 {
 	/** first element in the array argv is the name of first element*/
 	printf("%s\n", argv[0]);
