@@ -11,7 +11,7 @@
  */
 int main(int argc, UNUSED_ARGV)
 {
-	/** first element in the array argv is the name of first element*/
-	printf("%d\n", argc);
+	/** subtract 1 from total number of argument, 1 represent program name */
+	printf("%d\n", argc - 1);
 	return (0);
 }
