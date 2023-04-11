@@ -16,18 +16,18 @@ int main(int argc, char *argv[])
 	/**
 	 * we need exactly one argument
 	 */
-	if (argc != 2)
+	if (argc < 1 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
 	cents = atoi(argv[1]);
-	if (cents == 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
+	// if (cents == 0)
+	// {
+	// 	printf("Error\n");
+	// 	return (1);
+	// }
 
 	/**
 	 * we will start dividing from the largest cent to the smallest
@@ -48,6 +48,7 @@ int main(int argc, char *argv[])
 
 		number_coins += 1;
 	}
+
 	printf("%d\n", number_coins);
 	return (0);
 }
