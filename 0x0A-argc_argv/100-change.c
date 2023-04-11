@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	/**
 	 * we need exactly one argument
 	 */
-	if (argc == 1 || argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
