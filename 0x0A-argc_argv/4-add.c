@@ -10,8 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1;
-	int num2;
+	int arg;
+	int sum = 0;
 
 	/**
 	 * check if we are supplied with 2 argument third is the name of the
@@ -22,20 +22,20 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	else if (argc != 3)
+
+	for (arg = 1; arg < argc; arg++)
 	{
-		printf("Error\n");
-		return (1);
+		int num = atoi(argv[arg]);
+
+		if (num == 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+
+		sum += num;
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-
-	if (num1 == 0 || num2 == 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	printf("%d\n", num1 + num2);
+	printf("%d\n", sum);
 	return (0);
 }
