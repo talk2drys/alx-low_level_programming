@@ -1,41 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 /**
- * main - Add positive numbers
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: 0 (Success), 1 (Error)
+ * main - a program that input together and return their sum
+ * @argc: counts of arguments in the program
+ * @argv: size of the array
+ * Return: 0 or 1
  */
+
 int main(int argc, char *argv[])
 {
-	int arg;
-	unsigned int sum = 0;
+	unsigned int i, sum, num;
 
-	/**
-	 * check if we are supplied with 2 argument third is the name of the
-	 * binary
-	 */
-	if (argc == 1)
+	sum = 0;
+
+	if (argc < 3)
 	{
-		printf("0\n");
+		printf("%d\n", 0);
 		return (0);
 	}
-
-	for (arg = 1; arg < argc; arg++)
+	while ((argc- 1) && argc > 0)
 	{
-		int num = atoi(argv[arg]);
-
-		if (num == 0)
+		for (i = 0; argv[argc][i] != '\0'; i++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!(isdigit(argv[argc][i])))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-
+		num = atoi(argv[argc]);
 		sum += num;
 	}
-
 	printf("%d\n", sum);
-	return (0);
+	return (sum);
 }
