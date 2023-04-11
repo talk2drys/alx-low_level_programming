@@ -23,11 +23,14 @@ int main(int argc, char *argv[])
 	}
 
 	cents = atoi(argv[1]);
-	// if (cents == 0)
-	// {
-	// 	printf("Error\n");
-	// 	return (1);
-	// }
+	/**
+
+	if (cents == 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
+  */
 
 	/**
 	 * we will start dividing from the largest cent to the smallest
