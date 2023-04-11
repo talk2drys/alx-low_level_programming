@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - Add two numbers
+ * main - Add positive numbers
  * @argc: number of arguments
  * @argv: array of arguments
  *
@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int arg;
-	int sum = 0;
+	unsigned int sum = 0;
 
 	/**
 	 * check if we are supplied with 2 argument third is the name of the
