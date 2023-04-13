@@ -23,16 +23,16 @@ char *str_concat(char *s1, char *s2)
 
 	/* we need to calculate to length of the array */
 	len_s1 = strlen(s1);
-	len_s2 = strlen(s1);
+	len_s2 = strlen(s2);
 
 	/* create new buffer to old entire string + terminating character */
-	buffer = malloc(((len_s1 + len_s1) + 1) * sizeof(char));
+	buffer = malloc(((len_s1 + len_s2) + 1) * sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
 
 	/* copy content to new buffer */
 	strncpy(buffer, s1, len_s1);
-	strncpy(buffer + len_s2, s2, len_s2);
+	strncpy(buffer + len_s1, s2, len_s2);
 	strncpy(buffer + len_s1 + len_s2, "\0",
 			1); /* append terminating character */
 
