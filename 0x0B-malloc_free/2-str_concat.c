@@ -12,6 +12,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *buffer;
+	size_t len_s1;
+	size_t len_s2;
 
 	/*if NULL is entered for either of the input treat is as empty string*/
 	if (s1 == NULL)
@@ -20,8 +22,8 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	/* we need to calculate to length of the array */
-	size_t len_s1 = strlen(s1);
-	size_t len_s2 = strlen(s1);
+	len_s1 = strlen(s1);
+	len_s2 = strlen(s1);
 
 	/* create new buffer to old entire string + terminating character */
 	buffer = malloc(((len_s1 + len_s1) + 1) * sizeof(char));
