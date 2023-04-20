@@ -1,5 +1,6 @@
 #include <stdlib.h>
 
+
 /**
  * print_name - print name
  *
@@ -8,7 +9,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == NULL || f == NULL)
+	if (name == (void *)0 || f == (void *)0)
 	{
 		exit(1);
 	}
