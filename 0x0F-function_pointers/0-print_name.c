@@ -10,9 +10,7 @@
 void print_name(char *name, void (*f)(char *))
 {
 	if (name == (void *)0 || f == (void *)0)
-	{
-		exit(1);
-	}
+	  return;
 	f(name);
 }
 
