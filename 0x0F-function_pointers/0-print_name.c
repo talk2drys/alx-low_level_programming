@@ -2,7 +2,6 @@
 
 /**
  * print_name - print name
- *
  * @name: name to print
  * @f: point to a function that print name using predifined parameter
  */
@@ -12,3 +11,4 @@ void print_name(char *name, void (*f)(char *))
 		return;
 	f(name);
 }
+
